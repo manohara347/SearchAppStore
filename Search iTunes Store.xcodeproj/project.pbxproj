@@ -38,6 +38,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5756EE71FA1BBB5008D6EC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5A5035E1F8CF83C00FDA53D /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5756EE91FA1BBCD008D6EC1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F5A5034E1F8CF52500FDA53D /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F5756EEA1FA1BC08008D6EC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5A503501F8CF52500FDA53D /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5756EEB1FA1BC15008D6EC1 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F50AD6681F8E1A8200B99591 /* QueryService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		F5756EEC1FA1BC20008D6EC1 /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F5A503541F8CF52500FDA53D /* Main.storyboard */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
 		F5A503421F8CF52500FDA53D = {
 			isa = PBXGroup;
 			children = (
@@ -57,14 +97,14 @@
 		F5A5034D1F8CF52500FDA53D /* SearchAppStore */ = {
 			isa = PBXGroup;
 			children = (
-				F5A5034E1F8CF52500FDA53D /* AppDelegate.swift */,
-				F5A503501F8CF52500FDA53D /* SearchViewController.swift */,
-				F5A503521F8CF52500FDA53D /* Assets.xcassets */,
-				F5A503541F8CF52500FDA53D /* Main.storyboard */,
-				F5A5035E1F8CF83C00FDA53D /* Track.swift */,
-				F50AD6681F8E1A8200B99591 /* QueryService.swift */,
 				F5A503571F8CF52500FDA53D /* Info.plist */,
 				F50AD66A1F8E258800B99591 /* SearchAppStore.entitlements */,
+				F5756EEC1FA1BC20008D6EC1 /* ViewLayer */,
+				F5756EEB1FA1BC15008D6EC1 /* ServiceLayer */,
+				F5756EEA1FA1BC08008D6EC1 /* Controllers */,
+				F5756EE91FA1BBCD008D6EC1 /* SupportingFiles */,
+				F5756EE71FA1BBB5008D6EC1 /* Model */,
+				F5A503521F8CF52500FDA53D /* Assets.xcassets */,
 			);
 			path = SearchAppStore;
 			sourceTree = "<group>";
