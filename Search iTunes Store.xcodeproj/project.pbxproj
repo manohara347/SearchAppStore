@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		F50AD6681F8E1A8200B99591 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		F50AD66A1F8E258800B99591 /* SearchAppStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SearchAppStore.entitlements; sourceTree = "<group>"; };
-		F5A5034B1F8CF52500FDA53D /* SearchAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A5034B1F8CF52500FDA53D /* Search iTunes Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Search iTunes Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A5034E1F8CF52500FDA53D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A503501F8CF52500FDA53D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F5A503521F8CF52500FDA53D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		F5A5034C1F8CF52500FDA53D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5A5034B1F8CF52500FDA53D /* SearchAppStore.app */,
+				F5A5034B1F8CF52500FDA53D /* Search iTunes Store.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5A5034A1F8CF52500FDA53D /* SearchAppStore */ = {
+		F5A5034A1F8CF52500FDA53D /* Search iTunes Store */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5A5035B1F8CF52500FDA53D /* Build configuration list for PBXNativeTarget "SearchAppStore" */;
+			buildConfigurationList = F5A5035B1F8CF52500FDA53D /* Build configuration list for PBXNativeTarget "Search iTunes Store" */;
 			buildPhases = (
 				F5A503471F8CF52500FDA53D /* Sources */,
 				F5A503481F8CF52500FDA53D /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = SearchAppStore;
+			name = "Search iTunes Store";
 			productName = SearchAppStore;
-			productReference = F5A5034B1F8CF52500FDA53D /* SearchAppStore.app */;
+			productReference = F5A5034B1F8CF52500FDA53D /* Search iTunes Store.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5A503461F8CF52500FDA53D /* Build configuration list for PBXProject "SearchAppStore" */;
+			buildConfigurationList = F5A503461F8CF52500FDA53D /* Build configuration list for PBXProject "Search iTunes Store" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5A5034A1F8CF52500FDA53D /* SearchAppStore */,
+				F5A5034A1F8CF52500FDA53D /* Search iTunes Store */,
 			);
 		};
 /* End PBXProject section */
@@ -302,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5A503461F8CF52500FDA53D /* Build configuration list for PBXProject "SearchAppStore" */ = {
+		F5A503461F8CF52500FDA53D /* Build configuration list for PBXProject "Search iTunes Store" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A503591F8CF52500FDA53D /* Debug */,
@@ -311,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5A5035B1F8CF52500FDA53D /* Build configuration list for PBXNativeTarget "SearchAppStore" */ = {
+		F5A5035B1F8CF52500FDA53D /* Build configuration list for PBXNativeTarget "Search iTunes Store" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5A5035C1F8CF52500FDA53D /* Debug */,

@@ -35,7 +35,7 @@ class QueryService {
     }
     
     
-    /// Makes WEB API call to get products for searched text
+    /// Makes API call to get tracks for searched text
     ///
     /// - Parameters:
     ///   - searchTerm: user searched text
@@ -62,7 +62,7 @@ class QueryService {
         dataTask?.resume()
     }
     
-    /// Check for the results date and inform to user regarding this
+    /// Check for the results date
     ///
     /// - Parameter data: Received data
     /// - Returns: result which contains error or search results array
