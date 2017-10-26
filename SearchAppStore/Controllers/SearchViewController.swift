@@ -14,14 +14,22 @@ class SearchViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var searchBar: NSSearchField!
     
+    @IBOutlet weak var searchIndicator: NSProgressIndicator!
     @objc dynamic var enableSearchButton = false
     var tracks:[Track] = []
     let queryService = QueryService()
    
     @IBAction func search(_ sender: NSButton) {
-        
+        searchiTunes()
+    }
+    
+    func searchiTunes(){
+        self.searchIndicator.isHidden = false
+        self.searchIndicator.startAnimation(nil)
         let searchText = searchBar.stringValue
         queryService.getSearchResultsFor(searchText) { (result) in
+            self.searchIndicator.isHidden = true
+            self.searchIndicator.stopAnimation(nil)
             switch result {
             case .data(let tracks) :
                 self.tracks = tracks
@@ -39,6 +47,8 @@ class SearchViewController: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.runModal()
     }
+    
+   
 }
 
 //MARK:- NSSearchFieldDelegate
@@ -51,6 +61,14 @@ extension SearchViewController: NSSearchFieldDelegate {
     func searchFieldDidEndSearching(_ sender: NSSearchField) {
       enableSearchButton = false
     }
+    
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
+            searchiTunes()
+            return true
+        }
+        return false
+    }
 }
 
 //MARK:- NSTableViewDelegate
@@ -60,6 +78,7 @@ extension SearchViewController : NSTableViewDelegate {
         guard let result = arrayController.selectedObjects.first as? Track else { return }
         result.loadImage()
     }
+   
 }
 
 

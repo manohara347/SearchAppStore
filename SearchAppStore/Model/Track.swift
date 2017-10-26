@@ -13,11 +13,11 @@ class Track: NSObject {
     
     @objc dynamic let name: String
     @objc dynamic let artist: String
-    @objc dynamic let country:String
+    @objc dynamic let country: String
     @objc dynamic var artWorkImage: NSImage?
-    let trackID:Int
-    let artworkURL:String
-    init(name: String, artist: String, country:String,trackID:Int,artworkURL:String ) {
+    let trackID: Int
+    let artworkURL: String
+    init(name: String, artist: String, country: String,trackID: Int,artworkURL: String) {
         self.name = name
         self.artist = artist
         self.country = country

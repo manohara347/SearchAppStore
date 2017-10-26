@@ -45,17 +45,21 @@ class QueryService {
         dataTask?.cancel()
         guard let url = urlFrom(searchTerm) else {return}
         dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            defer { self.dataTask = nil }
+            defer { self.dataTask = .none }
             if let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
-                let result = self.updateSearchResults(data)
+                let result = self.createTacksFrom(data)
                 DispatchQueue.main.async {
                     completion(result)
                 }
             } else if let error = error {
                 DispatchQueue.main.async {
                 completion(.error(error.localizedDescription))
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(.error("Internal server error"))
                 }
             }
         }
@@ -66,7 +70,7 @@ class QueryService {
     ///
     /// - Parameter data: Received data
     /// - Returns: result which contains error or search results array
-    func updateSearchResults(_ data: Data) -> SearchResult<Track> {
+    func createTacksFrom(_ data: Data) -> SearchResult<Track> {
         
         guard let response = try? JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary,
             let tracks = response?["results"] as? [JSONDictionary] else {return .error("Dictionary does not contain results key\n") }
@@ -79,16 +83,14 @@ class QueryService {
     /// - Parameters:
     ///   - imageURL: url string received from the server
     ///   - completionHandler: returns image else nil for the URL
-    static func downloadImage(_ imageURL: String, completionHandler: @escaping (NSImage?) -> Void) {
+    static func downloadImage(_ imageURLString: String, completionHandler: @escaping (NSImage?) -> Void) {
         
-          guard let url = URL(string: imageURL) else {return }
-         URLSession.shared.dataTask(with: url){ (data, response, _) -> Void in
-            guard let data = data,
-                  let image = NSImage(data: data) else {
-                completionHandler(nil)
-                return
-            }
-            completionHandler(image)
+        guard let url = URL(string: imageURLString) else {
+            completionHandler(.none)
+            return
+        }
+         URLSession.shared.dataTask(with: url){ (data, _, _) -> Void in
+            completionHandler(data.flatMap({NSImage(data: $0)}))
         }.resume()
     }
 }

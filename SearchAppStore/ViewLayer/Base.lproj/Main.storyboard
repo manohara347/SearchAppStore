@@ -891,16 +891,21 @@
                                     <binding destination="ZTU-gp-2PX" name="value" keyPath="selection.artWorkImage" id="jVu-Sn-Hf0"/>
                                 </connections>
                             </imageView>
+                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="WtY-gp-MhS">
+                                <rect key="frame" x="212" y="253" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="iaf-Yu-JJe" firstAttribute="leading" secondItem="9eR-7L-Lmn" secondAttribute="trailing" constant="20" id="4XL-Ej-WD1"/>
                             <constraint firstItem="9eR-7L-Lmn" firstAttribute="trailing" secondItem="iVm-T6-Xmx" secondAttribute="trailing" id="618-ca-9OR"/>
+                            <constraint firstItem="WtY-gp-MhS" firstAttribute="centerX" secondItem="MiN-sb-jch" secondAttribute="centerX" id="CSb-ZW-spj"/>
                             <constraint firstItem="iVm-T6-Xmx" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="0.5" id="CjL-q6-z4v"/>
                             <constraint firstAttribute="bottom" secondItem="iVm-T6-Xmx" secondAttribute="bottom" constant="20" id="D9G-Xx-Ki6"/>
                             <constraint firstItem="9eR-7L-Lmn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="Gdh-xN-znf"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iaf-Yu-JJe" secondAttribute="trailing" constant="246" id="QjR-R7-al5"/>
                             <constraint firstItem="uVB-C0-F1q" firstAttribute="top" secondItem="DNC-ri-On6" secondAttribute="top" id="f68-Vg-RqA"/>
                             <constraint firstItem="9eR-7L-Lmn" firstAttribute="leading" secondItem="iVm-T6-Xmx" secondAttribute="leading" id="iSO-fh-8eK"/>
+                            <constraint firstItem="WtY-gp-MhS" firstAttribute="centerY" secondItem="MiN-sb-jch" secondAttribute="centerY" id="r4V-7F-wzd"/>
                             <constraint firstItem="iVm-T6-Xmx" firstAttribute="top" secondItem="9eR-7L-Lmn" secondAttribute="bottom" constant="20" id="rRg-1r-vnv"/>
                             <constraint firstItem="uVB-C0-F1q" firstAttribute="leading" secondItem="iVm-T6-Xmx" secondAttribute="trailing" constant="10" id="uKq-pX-dYd"/>
                             <constraint firstItem="iVm-T6-Xmx" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="vjl-OC-Xn6"/>
@@ -910,6 +915,7 @@
                     <connections>
                         <outlet property="arrayController" destination="ZTU-gp-2PX" id="SzO-PS-5pD"/>
                         <outlet property="searchBar" destination="9eR-7L-Lmn" id="KBD-zb-v3a"/>
+                        <outlet property="searchIndicator" destination="WtY-gp-MhS" id="USt-oc-VtC"/>
                         <outlet property="tableView" destination="MiN-sb-jch" id="3V2-u2-SWH"/>
                     </connections>
                 </viewController>
